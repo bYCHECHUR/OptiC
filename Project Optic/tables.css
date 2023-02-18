@@ -1,9 +1,9 @@
-table-red{
-    color:red;
+.table-red{
+    color:purple;
 }
-table-blue {
-    color:puppure;
+.table-blue {
+    color:blue;
 }
-table-bold{
-    font-weight:bold;
+.table-bold {
+    font-weight: bold;
 }
