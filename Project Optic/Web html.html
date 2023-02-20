@@ -1,79 +1,72 @@
-<!DOCTYPE html>
+<h2 style="color:green ;"> Быстро/Удобно/Выгодно </h2>
+<p=id="ideveloper"> Проектирование сетей оптических линий связи для доступа в интернет с учётом максимального кол-ва абонентов, включает в себя:
+    Проектирование , монтаж, подключение и обслуживание абонентов <b>internet</b>.
+    На этапе проектирования в первую очередь учитывается кол-во потребителей интернета.
+    Для упрощения процесса разрабатывается <b>Web-service</b> с привязкой к <b>Приложению</b> по созданию вычисления кол-ва материалов/оборудования из <b>БД</b> для монтажа <b>GPON</b> сети с привязкой к <b>OpeNMaps(картам)</b>, по которым <b>абонент/провайдер/любой пользователь на сайте</b> может определить <b>~стоимость</b> подключения к сети с учётом оборудования, материалов, работ, которые производят калькуляцию и вычисление подключения в <b>Частом/Многоквартирном</b> секторе.
+    
+    <p>(Eng.) Designing networks of optical communication lines for Internet access, taking into account the maximum number of subscribers, includes:
+        Design, installation, connection and maintenance of <b>internet</b> subscribers.
+        At the design stage, the number of Internet consumers is primarily taken into account.
+        To simplify the process, a <b>Web-service</b> is being developed with reference to the <b>Application</b> to create a calculation of the number of materials / equipment from the <b>DB</b> for mounting <b>GPON</b> networks linked to <b>OpeNMaps(maps)</b>, by which <b>subscriber/provider/any user on the site</b> can determine <b>~cost</b> of connecting to the network taking into account the equipment, materials, works that calculate and calculate the connection in the <b>Private / Multi-apartment</b> sector.    
+    <br>  </p> 
+    <div id="sf">
+    <div class="typeaheadOuter"><input type="text" value="" id="start" class="bd" placeholder="Откуда..." autocomplete="off"></div> <a class="waves-effect btn" onclick="addWaypoint(this, 'Куда...')">+</a><br><div class="typeaheadOuter"><input type="text" value="" id="end" class="bd" placeholder="Куда..." autocomplete="off"></div> <a class="waves-effect btn" onclick="addWaypoint(this, 'Куда...')">+</a><br> <input id="calcOptiC" class="bt" type="button" value="Посчитать расстояние!">
+    <input id="openBatch" class="bt batchBtn" type="button" lang="ru" value="Bulk"> </div>
+    <div id="language">
+    <ul class="int">
+    <li><a lang="ru-RU" class="ru-RU close" href="#" title="Калькулятор расстояний"></a></li>
+    <li><a lang="en" class="en-US" href="https://www.openstreetmap.org/#map=4/61.67/88.86" title="Calculate OptiC!"></a></li>
+    <li><a lang="ru" class="ru-RU" href="https://www.openstreetmap.org/#map=4/61.67/88.86" title="Рассчитать расстояние!"></a></li>
 
-  <html>
-	<head>
-   <p style="color:rgb(104, 34, 34) ;"> <title> OptiC </title></p>
-    <meta charset="utf-8">  
-	<meta name="keywords" content="сайт,html, OptiC">
-	<meta name="description" content="Этот веб сайт для удобатсва ,html, OptiC">
-    <link rel="stylesheet" href="Webstyle.css">
-    <link rel="shortcut icon" href="https://github.githubassets.com/images/icons/emoji/electron.png">
-
-	</head>
-	<body>
-     
-
-	<h1 style="color:blue ;">_______________________________Web сайт OptiC____________________________</h1>
-	<h1 class="privet">_________________________Интернет в каждый дом________________________</h1> 
-	
-		<p><em><b>(Rus.):</b></em><p=id="ideveloper"> Проектирование сетей оптических линий связи для доступа в интернет с учётом максимального кол-ва абонентов, включает в себя:
-            Проектирование , монтаж, подключение и обслуживание абонентов <b>internet</b>.
-            На этапе проектирования в первую очередь учитывается кол-во потребителей интернета.
-            Для упрощения процесса разрабатывается <b>Web-service</b> с привязкой к <b>Приложению</b> по созданию вычисления кол-ва материалов/оборудования из <b>БД</b> для монтажа <b>GPON</b> сети с привязкой к <b>OpeNMaps(картам)</b>, по которым <b>абонент/провайдер/любой пользователь на сайте</b> может определить <b>~стоимость</b> подключения к сети с учётом оборудования, материалов, работ, которые производят калькуляцию и вычисление подключения в <b>Частом/Многоквартирном</b> секторе.
-            
-            <p><em><b>(Eng.):</b></em> Designing networks of optical communication lines for Internet access, taking into account the maximum number of subscribers, includes:
-                Design, installation, connection and maintenance of <b>internet</b> subscribers.
-                At the design stage, the number of Internet consumers is primarily taken into account.
-                To simplify the process, a <b>Web-service</b> is being developed with reference to the <b>Application</b> to create a calculation of the number of materials / equipment from the <b>DB</b> for mounting <b>GPON</b> networks linked to <b>OpeNMaps(maps)</b>, by which <b>subscriber/provider/any user on the site</b> can determine <b>~cost</b> of connecting to the network taking into account the equipment, materials, works that calculate and calculate the connection in the <b>Private / Multi-apartment</b> sector.    
-          
-
-        <p><em><b>Основные компоненты проекта:</b></em></p>
-
-            <p style="color:rgb(110, 103, 103) ;margin:50px ;" id="ideveloper"><b>Data</b> (c++/Java/Python/1c)</p>
-            <p style="color:rgb(255, 0, 43) ;margin:50px ;"><b>Web-Service</b> (JavaScript) </p>
-            <p style="color:orange ;margin:50px "><b>Server</b> (Local/Virtual)</p>
-            <p style="color:blue ;margin:50px "><b>Maps</b> (Open Maps/Maps?)</p>
-            <p style="color:rgb(184, 116, 13) ;margin: 50px;"><b>App</b> (OptiC)</p>
-            <link rel="stylesheet" href="Style.css">
-
-            <link rel="shortcut icon" href="https://avatars.githubusercontent.com/u/124597029?s=120&v=4"/>
-            <table style="color:blue ;" border="1">
-
-            <thead>
-        <tr>
-        <th>Наименование сектора абонентов</th>
-        <th>коэффициент</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-        <td>Частный сектор</td>
-        <td>2.4</td>
-        </tr>
-        <tr>
-        <td>Многоквартирный сектор</td>
-        <td>1.3</td>
-        </tr>
-        </tbody>
-        <tfoot>
-        <tr>
-        <td style="color:orange ;" colspan="2">Суммарный коэффициент: (2.4+1.3) = 3.7 <img src="Vols.jpg" width="600" alt=""></td> 
-        </tr>
-        <input type="text" name="City" id="">
-        <input type="text" name="street" id="">
-        <input type="number" name="number" id="">
-
-        </tfoot>
-        <link rel="stylesheet" href="Style.css">
-
-            </table {style color:blue}>
-            
-        <a class="btn btn-outline-success btn-lg btn-block" href="https://youtu.be/PgAc7XGWgTQ" target="_blank"> Ролик на YouTube >
-       <a class="btn btn-success btn-lg btn-block" href="https://www.openstreetmap.org/#map=4/61.67/88.86" target="_blank"> Maps 
-    <a href="https://github.com/bYCHECHUR/OptiC/blob/49ef30c14c030c65e12bd0217c320a6ec9a2d335/Project%20Optic/Web%20html.html" target="_blank">    <ul>  
-
-            <p><b><h6>© 2023 OptiC, Inc.<h6></p></ul>
-            </ul>       
-   </body>
-
- </html>
+    <h1>Расчёт подключения абонентов к сети интернет</h1>
+    <div class="information-block">
+    <p>
+    OptiC упрощает процесс проектирования. Просто укажите места в поле поиска, и вы получите ориентировночную стоимость подключения абонентов (по опорам/по кабельным канализациям), возможный маршрут подключения и всю необходимую информацию по метериалам с учётом работ. Разумеется, вы можете считать расстояния и задавая координаты (долготу и широту). </p>
+    </div>
+    <img src="https://pbs.twimg.com/media/FMqfNggWYAEw60p?format=jpg&amp;name=medium" style="width: 100%;">
+    <div class="information-block flights">
+        </div>
+    </div>
+    <h3>Узнайте ориентировочную стоимость монтажа для доступа в интернет с учётом работ </h3>
+    <div class="information-block">
+    <p>
+    Хотите определить стоимость подключения, OptiC вычисляет географическую точку ближайщей  опоры связи магистрального кабеля и расчитывает длинну опитческого кабеля с учётом расходным материалов для доступа в интернет. </p>
+    </div>
+    <div class="information-block">
+    <h5><a href="/Россия" title="" class="deeplink samecountry">Россия</a>: города</h5><p><a href="/Москва" title="" class="deeplink city">Москва</a>, <a href="/Санкт-Петербург" title="" class="deeplink city">Санкт-Петербург</a>, <a href="/Новосибирск" title="" class="deeplink city">Новосибирск</a>, <a href="/Екатеринбург" title="" class="deeplink city">Екатеринбург</a>, <a href="/Нижний-Новгород" title="" class="deeplink city">Нижний Новгород</a>, <a href="/Самара" title="" class="deeplink city">Самара</a>, <a href="/Омск" title="" class="deeplink city">Омск</a>, <a href="/Казань" title="" class="deeplink city">Казань</a>, <a href="/Ростов-на-Дону" title="" class="deeplink city">Ростов-на-Дону</a>, <a href="/Челябинск" title="" class="deeplink city">Челябинск</a>, <a href="/Уфа" title="" class="deeplink city">Уфа</a>, <a href="/Волгоград" title="" class="deeplink city">Волгоград</a>, <a href="/Пермь" title="" class="deeplink city">Пермь</a>, <a href="/Красноярск" title="" class="deeplink city">Красноярск</a>, <a href="/Саратов" title="" class="deeplink city">Саратов</a>, <a href="/Воронеж" title="" class="deeplink city">Воронеж</a>, <a href="/Тольятти" title="" class="deeplink city">Тольятти</a>, <a href="/Краснодар" title="" class="deeplink city">Краснодар</a>, <a href="/Ульяновск" title="" class="deeplink city">Ульяновск</a>, <a href="/Ижевск" title="" class="deeplink city">Ижевск</a>, <a href="/Ярославль" title="" class="deeplink city">Ярославль</a>, <a href="/Барнаул" title="" class="deeplink city">Барнаул</a>, <a href="/Владивосток" title="" class="deeplink city">Владивосток</a>, <a href="/Иркутск" title="" class="deeplink city">Иркутск</a>, <a href="/Хабаровск" title="" class="deeplink city">Хабаровск</a>, <a href="/Хабаровск-Второй" title="" class="deeplink city">Хабаровск Второй</a>, <a href="/Оренбург" title="" class="deeplink city">Оренбург</a>, <a href="/Новокузнецк" title="" class="deeplink city">Новокузнецк</a>, <a href="/Рязань" title="" class="deeplink city">Рязань</a>, <a href="/Тюмень" title="" class="deeplink city">Тюмень</a>, <a href="/Липецк" title="" class="deeplink city">Липецк</a>, <a href="/Пенза" title="" class="deeplink city">Пенза</a>, <a href="/Набережные-Челны" title="" class="deeplink city">Набережные Челны</a>, <a href="/Калининский" title="" class="deeplink city">Калининский</a>, <a href="/Астрахань" title="" class="deeplink city">Астрахань</a>, <a href="/Махачкала" title="" class="deeplink city">Махачкала</a>, <a href="/Томск" title="" class="deeplink city">Томск</a>, <a href="/Кемерово" title="" class="deeplink city">Кемерово</a>, <a href="/Тула" title="" class="deeplink city">Тула</a>, <a href="/Киров" title="" class="deeplink city">Киров</a>, <a href="/Чебоксары" title="" class="deeplink city">Чебоксары</a>, <a href="/Калининград" title="" class="deeplink city">Калининград</a>, <a href="/Брянск" title="" class="deeplink city">Брянск</a>, <a href="/Иваново" title="" class="deeplink city">Иваново</a>, <a href="/Магнитогорск" title="" class="deeplink city">Магнитогорск</a>, <a href="/Курск" title="" class="deeplink city">Курск</a>, <a href="/Тверь" title="" class="deeplink city">Тверь</a>, <a href="/Нижний-Тагил" title="" class="deeplink city">Нижний Тагил</a>, <a href="/Ставрополь" title="" class="deeplink city">Ставрополь</a>, <a href="/Улан-Удэ" title="" class="deeplink city">Улан-Удэ</a>, <a href="/Архангельск" title="" class="deeplink city">Архангельск</a>, <a href="/Белгород" title="" class="deeplink city">Белгород</a>, <a href="/Курган" title="" class="deeplink city">Курган</a>, <a href="/Калуга" title="" class="deeplink city">Калуга</a>, <a href="/Красногвардейский" title="" class="deeplink city">Красногвардейский</a>, <a href="/Сочи" title="" class="deeplink city">Сочи</a>, <a href="/Орёл" title="" class="deeplink city">Орёл</a>, <a href="/Волжский" title="" class="deeplink city">Волжский</a>, <a href="/Смоленск" title="" class="deeplink city">Смоленск</a>, <a href="/Мурманск" title="" class="deeplink city">Мурманск</a>, <a href="/Владикавказ" title="" class="deeplink city">Владикавказ</a>, <a href="/Череповец" title="" class="deeplink city">Череповец</a>, <a href="/Вологда" title="" class="deeplink city">Вологда</a>, <a href="/Владимир" title="" class="deeplink city">Владимир</a>, <a href="/Чита" title="" class="deeplink city">Чита</a>, <a href="/Саранск" title="" class="deeplink city">Саранск</a>, <a href="/Сургут" title="" class="deeplink city">Сургут</a>, <a href="/Тамбов" title="" class="deeplink city">Тамбов</a>, <a href="/Йошкар-Ола" title="" class="deeplink city">Йошкар-Ола</a></p> <h5
+    <div class="information-block languages">
+    <p class="contribute">
+    Сделайте сервис OptiC доступнее для мира, переводя его на другие языки. <a href="http://i18n.OptiC/"> Помочь с переводом! </a> </p>
+    <ul class="int">
+    <li class="us"><a lang="en" href="https://www.OptiC" title="Calculate OptiCs worldwide">OptiC calculator</a></li>
+    <li 
+    </div>
+    <h5 id="Imprint">Выходные данные</h5>
+    <div class="information-block imprint">
+    <p>
+    hukumach (bYCHECHUR) <br>
+    E-Mail: <a href="hukumachecurow@yandex.ru">Contact us!</a>
+    </p>
+    <p><b><h6>© 2023 OptiC, Inc.<h6></p></ul>
+    </ul>       
+    <p>
+    Maps and Geodata: © OpenStreetMap contributors
+    </p>
+    <p>
+    Favicons: Icon made by <a title="Freepik" href="http://www.freepik.com">Freepik</a> from <a title="Flaticon" href="http://www.flaticon.com">www.flaticon.com</a><br>
+    </p>
+    </div>
+    <div id="Footer" class="footer">
+    <a target="_new" href="https://docs.OptiC/api" title="OptiC API">API</a> -
+    <a target="_new" href="https://bulk.OptiC/" title="Excel OptiC calculation">Bulk</a> -
+    <a target="_new" href="https://docs.OptiC" title="Help &amp; Documentation">Help</a> -
+    <a href="https://status.OptiC/" target="_new" title="System Status">Status</a> -
+    <a href="/privacy">Privacy policy</a> -
+    <a href="#" onclick="window._sp_.loadPrivacyManagerModal(207076)">Cookie settings</a>
+    </div>
+    </div>
+    </div>
+    
+    
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.png">
+    <script type="text/javascript" src="/pagespeed_static/js_defer.I4cHjq6EEP.js"></script><div class="autocomplete-suggestions" style="position: absolute; display: none; max-height: 300px; z-index: 9999;"></div><div class="autocomplete-suggestions" style="position: absolute; display: none; max-height: 300px; z-index: 9999;"></div></body></html>
